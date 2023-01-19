@@ -2,9 +2,15 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: |
-      direnv allow
-      mkdir -p /home/gitpod/.config/nix &&
-      echo 'sandbox = false' >> /home/gitpod/.config/nix/nix.conf
+      sudo apt remove --autoremove emacs emacs-common
+      sudo add-apt-repository ppa:kelleyk/emacs
+      sudo apt update
+      sudo apt install emacs28
+
+      git clone git@github.com:assimetrick/orgmode.git ~/org
+      git clone git@github.com:assimetrick/emacs ~/.emacs.d
+      emacs
+
 
 vscode:
   extensions:
