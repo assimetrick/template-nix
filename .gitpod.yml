@@ -1,7 +1,7 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - init: |
+  - before: |
       sudo apt remove --autoremove emacs emacs-common
       sudo add-apt-repository ppa:kelleyk/emacs
       sudo apt update
