@@ -6,7 +6,6 @@ tasks:
       sudo add-apt-repository ppa:kelleyk/emacs
       sudo apt update
       sudo apt install emacs28
-
       sudo apt install davfs2
       sudo usermod -aG davfs2 gitpod
       mkdir ~/library
@@ -14,9 +13,10 @@ tasks:
       sudo cp /etc/davfs2/secrets ~/.davfs2/secrets
       sudo chown gitpod:gitpod ~/.davfs2/secrets
       sudo chmod 600 ~/.davfs2/secrets
-      echo "https://nextcloud.vers.pw/nextcloud/remote.php/dav/files/ASSIMETRICK/ $Webdavl $Webdavp" >> ~/.davfs2/secrets
-
-
+      sudo cp /etc/fstab ~/fstab
+      echo "https://nextcloud.vers.pw/remote.php/webdav/    /home/gitpod/library    davfs    user,rw,_netdev 0 0" >> ~/fstab
+      sudo mv ~/fstab /etc/fstab
+      echo "/home/gitpod/library $Webdavl $Webdavp" >> ~/.davfs2/secrets
       git clone https://github.com/assimetrick/orgmode.git ~/org
       git clone https://github.com/assimetrick/emacs.git ~/.emacs.d
       emacs
