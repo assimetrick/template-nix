@@ -1,0 +1,2 @@
+# UNCONFIGURED FSTAB FOR BASE SYSTEM
+https://nextcloud.vers.pw/remote.php/webdav/    /home/gitpod/library    davfs    user,rw,_netdev 0 0
