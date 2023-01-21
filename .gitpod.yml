@@ -13,10 +13,9 @@ tasks:
       sudo cp /etc/davfs2/secrets ~/.davfs2/secrets
       sudo chown gitpod:gitpod ~/.davfs2/secrets
       sudo chmod 600 ~/.davfs2/secrets
-      sudo cp /etc/fstab ~/fstab
-      echo "https://nextcloud.vers.pw/remote.php/webdav/    /home/gitpod/library    davfs    user,rw,_netdev 0 0" >> ~/fstab
-      sudo mv ~/fstab /etc/fstab
       echo "/home/gitpod/library $Webdavl $Webdavp" >> ~/.davfs2/secrets
+      sudo mv ~/.davfs2/secrets /etc/davfs2/secrets
+      sudo mv /workspace/template-nix/fstab /etc/fstab
       git clone https://github.com/assimetrick/orgmode.git ~/org
       git clone https://github.com/assimetrick/emacs.git ~/.emacs.d
       emacs
