@@ -11,8 +11,6 @@ tasks:
       mkdir ~/library
       mkdir ~/.davfs2
       sudo cp /etc/davfs2/secrets ~/.davfs2/secrets
-      sudo chown gitpod:gitpod ~/.davfs2/secrets
-      sudo chmod 600 ~/.davfs2/secrets
       echo "/home/gitpod/library $Webdavl $Webdavp" >> ~/.davfs2/secrets
       sudo mv ~/.davfs2/secrets /etc/davfs2/secrets
       sudo mv /workspace/template-nix/fstab /etc/fstab
