@@ -13,7 +13,7 @@ tasks:
       sudo cp /etc/davfs2/secrets ~/.davfs2/secrets
       echo "/home/gitpod/library $Webdavl $Webdavp" >> ~/.davfs2/secrets
       sudo mv ~/.davfs2/secrets /etc/davfs2/secrets
-      sudo mv /workspace/template-nix/fstab /etc/fstab
+      sudo cp /workspace/template-nix/fstab /etc/fstab
       git clone https://github.com/assimetrick/orgmode.git ~/org
       git clone https://github.com/assimetrick/emacs.git ~/.emacs.d
       cd ~
