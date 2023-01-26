@@ -16,6 +16,7 @@ tasks:
       sudo cp /workspace/template-nix/fstab /etc/fstab
       git clone https://github.com/assimetrick/orgmode.git ~/org
       git clone https://github.com/assimetrick/emacs.git ~/.emacs.d
+      git clone https://github.com/assimetrick/org-roam.git ~/org-roam
       cd ~
       wget http://archive.ubuntu.com/ubuntu/pool/universe/x/xpdf/xpdf_3.04-7_amd64.deb
       sudo apt-get install ./xpdf_3.04-7_amd64.deb
